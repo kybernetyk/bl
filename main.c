@@ -19,7 +19,7 @@ int read_numeric_file(char *path) {
 int write_numeric_file(char *path, int value) {
 	FILE *f = fopen(path, "wt");
 	if (!f) {
-		printf("Can't open '%s' for writing. Make sure the file is writeable to the current user.\n", path);
+		printf("Can't open '%s' for writing. Make sure the file is writeable to the current user.\nTry this: sudo chmod ugo+w /sys/class/backlight/intel_backlight/brightness\n", path);
 		return -1;
 	}
 	int res = fprintf(f, "%i", value);

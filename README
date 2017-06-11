@@ -3,7 +3,7 @@ bl
 A qucik and dirty replacement for xbacklight which somehow doesn't want to
 work with my Debian installation on the Thinkpad X220.
 
-Make sure that the backlight sysfile is writeable to the current user. (The
+Make sure that the backlight sysfile is writeable by the current user. (The
 program will tell you which file exactly when it fails to open it for
 writing).
 
