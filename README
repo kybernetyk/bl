@@ -7,4 +7,7 @@ Make sure that the backlight sysfile is writeable by the current user. (The
 program will tell you which file exactly when it fails to open it for
 writing).
 
+This has been only tested on a Debian Unstable installation with a Thinkpad
+X220. So this might not work for your specific brand of laptop.
+
 License is Affero GPL3. (c) J. Szpilewski
