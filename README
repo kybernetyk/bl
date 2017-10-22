@@ -1,4 +1,7 @@
-bl
+bl - x11 backlight control
+==========================
+
+** Update: This works with Ubuntu 17.10 **
 
 A qucik and dirty replacement for xbacklight which somehow doesn't want to
 work with my Debian installation on the Thinkpad X220.
@@ -9,5 +12,21 @@ writing).
 
 This has been only tested on a Debian Unstable installation with a Thinkpad
 X220. So this might not work for your specific brand of laptop.
+
+===============================================
+Bonus for i3 users - add this to your i3 config
+===============================================
+
+#make brightness keyboard keys work
+bindsym XF86MonBrightnessUp exec bl -i
+bindsym XF86MonBrightnessDown exec bl -d
+
+#bonus 2 - make volume keys work with i3
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioMicMute exec pactl set-source-mute 1 toggle
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+
 
 License is Affero GPL3. (c) J. Szpilewski
